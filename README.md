@@ -1,5 +1,7 @@
 # LDAP simple server mock
 
+**This fork will ALWAYS return all users specified in the users.json file. This is by design and for a specific use case.**
+
 Really simple basic mock for [LDAP server](https://tools.ietf.org/html/rfc4511). Use it to mock an LDAP server and authenticate a user without further verifications, it simply searches for the user in the database and returns it. It does not implement LDAP SASL authentication. This should not be used in production environment, it is just for test purpose, nothing more.
 
 # Install
@@ -65,8 +67,6 @@ With:
  - **-b "dc=test"** the search base in LDAP directory, it should be the same as the **searchBase** property in server configuration above
  - **"(&(objectclass=person)(cn=user-login))"** the search filter, it should be the same as the **searchFilter** property in server configuration with **{{username}}** replaced by the user login
  - **attribute1, attribute2** the list of attributes you want to be returned
-
-**This fork will ALWAYS return all users specified in the users.json file.**
 
 # Contributors
 
