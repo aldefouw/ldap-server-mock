@@ -57,14 +57,16 @@ A user can also have any number of other attributes which will all be returned.
 
 Here is an example using the ldapsearch client from OpenLDAP with the configuration above:
 
-    ldapsearch -x -H ldap://127.0.0.1:3004 -b "dc=test" "(&(objectclass=person)(cn=user-login))" attribute1 attribute2
-
+    ldapsearch -x -H ldap://127.0.0.1:3004 -b "dc=test"
+    
 With:
  - **-x** to deactivate authentication to the LDAP server
  - **-H ldap://127.0.0.1:3004** the server URL
  - **-b "dc=test"** the search base in LDAP directory, it should be the same as the **searchBase** property in server configuration above
  - **"(&(objectclass=person)(cn=user-login))"** the search filter, it should be the same as the **searchFilter** property in server configuration with **{{username}}** replaced by the user login
  - **attribute1, attribute2** the list of attributes you want to be returned
+
+This fork will ALWAYS return all users specified in the users.json file.
 
 # Contributors
 
