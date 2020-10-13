@@ -66,7 +66,7 @@ With:
  - **"(&(objectclass=person)(cn=user-login))"** the search filter, it should be the same as the **searchFilter** property in server configuration with **{{username}}** replaced by the user login
  - **attribute1, attribute2** the list of attributes you want to be returned
 
-This fork will ALWAYS return all users specified in the users.json file.
+**This fork will ALWAYS return all users specified in the users.json file.**
 
 # Contributors
 
